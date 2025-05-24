@@ -1,0 +1,59 @@
+interface company {
+    name: string,
+    catchPhrase: string,
+    bs: string
+}
+
+interface geo {
+    lat: string,
+    lng: string
+}
+
+interface address {
+    street: string,
+    suite: string,
+    city: string,
+    zipcode: string,
+    geo: geo
+}
+
+
+interface jsonData {
+    id: number
+    name: string,
+    username: string,
+    email: string,
+    address: address,
+    phone: string,
+    website: string,
+    company: company
+}
+
+async function getData<T>(url: string) {
+    const res = await fetch(url, {
+      cache: 'no-store'
+    });
+  
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+  
+    const data = (await res.json()) as T[];
+    return data
+}
+  
+
+export default async function PageOne() {
+    const posts = await getData<jsonData>('https://jsonplaceholder.typicode.com/users');
+    
+    return (
+        <div>
+        <h1>Homepage</h1>
+        <ul>
+          {posts.slice(0, 5).map((post: jsonData) => (
+            <li key={post.id}>{post.email}</li>
+          ))}
+        </ul>
+      </div>
+    );
+}

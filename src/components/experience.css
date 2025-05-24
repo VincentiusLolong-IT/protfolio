@@ -1,0 +1,93 @@
+.experience {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 800px;
+    color: rgb(114, 108, 108);
+}
+
+.experience-main{
+  background-color: #dbd3d3;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 100px;
+}
+
+.experiance-menu {
+  background-color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 12px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.experiance-menu.active {
+  color: blue;
+  font-weight: bold;
+}
+
+.experience-company {
+  border: 5px solid #dbd3d3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-company>.year {
+  text-align: right;
+  background-color: rgb(219, 211, 211);;
+  align-items: left;
+  padding: 10px;
+  color:white;
+  border-radius: 1em;
+  font-weight: bolder;
+}
+
+.experience-detail{
+  max-width: 400px;
+  padding-left: 20px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.experience-detail h3 {
+    text-align: center;
+}
+
+summary{
+  cursor:pointer
+}
+
+.detail-job {
+  padding-left: 30px; 
+}
+
+@media (max-width: 768px) {
+  .experience {
+    flex-direction: column;
+    justify-content: left;
+  }
+  .experience-main {
+    width: 100%;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .experience-company{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+  }
+  .experiance-menu {
+      background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 20px;
+    text-align: center;
+  }
+}

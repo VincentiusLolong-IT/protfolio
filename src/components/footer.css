@@ -1,0 +1,96 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    padding: 4em;
+}
+.media {
+    flex: 1;
+}
+.media-title {
+    color: whitesmoke;
+}
+
+.wrap-media {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  row-gap: 20px;
+  column-gap: 2em;
+}
+
+.media a {
+    color: whitesmoke;
+}
+
+.icon{
+    width:30;
+    height:30;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.icon-gmail {
+    width:20;
+    height:10;
+    background-color: white;
+    overflow: hidden;
+}
+
+.contact {
+    flex: 1;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact p, .contact h2 {
+    color: whitesmoke;
+}
+
+.email{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+}
+
+/* @media screen and (min-width: 769px) and (max-width: 1024px) {
+    footer {
+        column-gap: 20%;
+        padding-bottom: 10%;
+    }
+} */
+
+@media (max-width: 768px) { 
+    footer {
+        padding: 2em;
+    }
+    .media-title {
+        font-size: 15px;
+    }
+    .wrap-media {
+        display: grid;
+        grid-template-rows: repeat(5, auto);
+        grid-auto-flow: column;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+    .media a {
+        font-size: 10px;
+    }
+    .icon{
+        width:20;
+        height:20;
+    }
+    .contact p, .contact h2 {
+        font-size: 11px;
+    }
+}
+
+/* @media screen and (min-width: 461px) and (max-width: 768px)   {
+    footer {
+        column-gap: 40%;
+    }
+} */

@@ -1,0 +1,229 @@
+html{
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+}
+
+.test a {
+    color: whitesmoke;
+    padding: 20px 20px;
+    text-decoration: none;
+}
+
+.test a:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.menu {
+    padding: 20px;
+    background-color: bisque;
+}
+
+main {
+    margin: 30px;
+}
+
+.biodata {
+    display: flex;
+    /* background-color: DodgerBlue; */
+    justify-content: left;
+    background-color: #dbd3d3;
+    padding-top: 60px;
+}
+.profile{
+    display: flex;
+    flex: 2;
+    justify-content: center;   /* Center .name horizontally */
+    align-items: center;      
+}
+.profile h1{
+    font-size: 2vw;
+}
+
+.fullname, .title {
+  margin: 0;
+  /* white-space: nowrap; */
+}
+
+.fullname {
+    color: rgb(114, 108, 108);
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 100px;
+    margin-left: 150px;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+            1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.title {
+    color: rgb(114, 108, 108);;
+    font-weight: 400;
+        text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+
+.photo{
+    /* background-color: aliceblue; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-profile {
+    width: 200;
+    height: 200;
+    background-color: gray;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+/* .media-title {
+    margin-left: 260px;
+}
+
+.wrap-media {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  row-gap: 20px;
+  max-width: 600px;
+  margin-left: 260px;
+} */
+
+.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    column-gap: 1em;
+}
+
+.social a {
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    margin-top: 100px;
+}
+
+.skill-title {
+    text-align: center;
+}
+
+.frontend-main {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.skill-list {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-auto-flow: row;
+}
+
+.skill-list-icon {
+  max-width: 80px;
+  max-height: 20px;
+  width: auto;
+  height: auto;
+}
+
+.backend-main {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.skill-name {
+    text-align: center;
+}
+
+.skill-name h3 {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.introduction-main {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    background-color: #dbd3d3;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+}
+
+.introduction-main h2 {
+    padding: 40px;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    color:rgb(114, 108, 108);
+    font-weight:800;
+    /* text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; */
+}
+.experience-company{
+    background-color: #faf9f9;
+}
+.experience-title {
+    margin-top: 60px;
+    text-align: center;
+    color: rgb(114, 108, 108);
+}
+
+footer {
+    background-color: black;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 15px;
+    }
+    .biodata {
+        display: flex;
+        flex-direction: column;
+        background-color: #dbd3d3;
+        width: 100%;
+    }
+    .profile{
+        justify-content: left;
+        margin-bottom: 10%;
+    }
+    .profile h1{
+        font-size: 4vw;
+    }
+    .profile h2 {
+        font-size: 3vw;
+    }
+    .fullname {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 10%;
+        font-size: 20px;
+        font-weight: normal;
+        max-height: 50px;
+    }
+    .introduction-main {
+        padding-bottom: 0px;
+        background-color: #dbd3d3;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-bottom-left-radius: 40%;
+        border-bottom-right-radius: 40%;
+    }
+    .introduction-main h2 {
+        padding-top: 0px;
+        font-size: 15px;
+    }
+    .skill-list{
+        grid-template-columns: repeat(3, auto);
+    }
+}
